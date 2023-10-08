@@ -1,0 +1,40 @@
+ALGORITHM Dot_product
+//declarer une fonction
+FUNCTION dot_product(V:INTEGER, U:INTEGER) : FLOAT
+VAR
+    x,y:INTEGER;
+    p2:FLOAT;
+BEGIN
+p2:=0;
+    FOR x FROM 0 TO n-1 STEP 1  DO
+       FOR y FROM 0 TO m-1 STEP 1  DO
+        p2:= p2+ v[i]*u[j];
+        x+=1;
+        y+=1;
+        read(p2)
+       END_FOR 
+    END_FOR
+    RETURN p2 ;
+END
+//commencer notre algotithme
+VAR
+    V : ARRAY_OF INTEGER[n];
+    U : ARRAY_OF INTEGER[m];
+    prod : FLOAT;
+    n,m:INTEGER;
+BEGIN
+    write("veuillez entrer les cordonnés du vecteur ",V);
+    read V
+    write("veuillez entrer les cordonnés du vecteur",U);
+    read U
+     //calling function
+    read("le produit de deux vecteurs est", dot_product(V,U))
+    prod:=dot_product(V,U);
+     IF (prod==0) THEN
+            write("les deux vecteurs sont orthogonals");
+        ELSE
+            write("les deux vecteurs ne sont pas orthogonals");
+        END_IF
+    
+
+END

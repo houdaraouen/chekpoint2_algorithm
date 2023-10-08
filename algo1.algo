@@ -1,20 +1,28 @@
 ALGORITHM somme
 VAR
- set1 : ARRAY_OF INTEGER[5];
- set2 : ARRAY_OF INTEGER[5];
- i : INTEGER;
- sum : INTEGER;
+ set1 : ARRAY_OF INTEGER[n];
+ set2 : ARRAY_OF INTEGER[m];
+ i,j,sum : INTEGER;
+ 
 BEGIN
-    set1 := {1,5,3,8,4};
-    set2 := {3,5,6,8,4};
-    write("Print Array:");
+    
+    read set1;
+    read set2;
     sum := 0;
-FOR i FROM 0 TO 4 STEP 1  DO
-FOR i FROM 0 TO 4 STEP 1  DO
-    IF (set1[i]=set2[i]) THEN
-        sum := set1[i]+set2[i];
-           i := i+1; 
+FOR i FROM 0 TO n-1 STEP 1  DO
+
+    IF (set1[i]<>l'ensemble set2) THEN
+        sum := sum+set1[i];
+           i := i+1;
+            
+    END_IF
+
+END_FOR
+FOR j FROM 0 TO m-1 STEP step  DO
+    IF (set2[J]<>l'ensemble set1) THEN
+        sum := sum+set2[j];
+        j := j+1;
     END_IF
 END_FOR
-END_FOR
+write sum;
 END
